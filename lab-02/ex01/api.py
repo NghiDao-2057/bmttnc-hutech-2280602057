@@ -6,21 +6,21 @@ app = Flask(__name__)
 caesar_cipher = CaesarCipher()
 
 @app.route("/api/caesar/encrypt", methods=["POST"])
-def caesar_ecrypt():
-    data = request.json
+def caesar_encrypt():
+    data = request.json 
     plain_text = data['plain_text']
     key = int(data['key'])
-    ecrypted_text = caesar_cipher.ecrypt_text(plain_text, key)
-    return jsonify({'ecrypted_message': ecrypted_text})
+    encrypted_text =  caesar_cipher.encrypt_text(plain_text, key)
+    return jsonify ({'encrypted_message': encrypted_text})
 
-@app.route("/api/caesar/dencrypt", methods=["POST"])
+@app.route("/api/caesar/decrypt", methods=["POST"])
 def caesar_decrypt():
-    data = request.json    
+    data = request.json
     cipher_text = data['cipher_text']
     key = int(data['key'])
     decrypted_text = caesar_cipher.decrypt_text(cipher_text, key)
     return jsonify({'decrypted_message': decrypted_text})
 
-#main function
+#main funtion
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
