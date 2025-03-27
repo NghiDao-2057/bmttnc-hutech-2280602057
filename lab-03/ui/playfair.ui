@@ -131,11 +131,11 @@
       <x>470</x>
       <y>460</y>
       <width>101</width>
-<height>31</height>
+      <height>31</height>
      </rect>
     </property>
     <property name="text">
-     <string>Decrypy</string>
+     <string>Decrypt</string>
     </property>
    </widget>
   </widget>

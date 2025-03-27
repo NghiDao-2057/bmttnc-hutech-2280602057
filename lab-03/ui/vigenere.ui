@@ -117,7 +117,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Decrypy</string>
+     <string>Decrypt</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_4">
